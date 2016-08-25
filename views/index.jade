@@ -1,5 +1,12 @@
 extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
+div.container
+    +navbar("BalanceSheet","dropdown_menu")
+        +nav_item("#","active") Home
+        +nav_item("/about") About
+        +nav_item("/contact") Contact
+        +nav_item_dropdown("#")(label="Login")
+            +nav_item("/edit") Settings
+            +nav_item("/logout") Logout
+    div.container
+        h1 Araja Jyothi Babu getting ready for the awesomeness
